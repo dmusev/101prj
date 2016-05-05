@@ -1,0 +1,158 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+#login-dp{
+  min-width: 250px;
+  padding: 14px 14px 0;
+  overflow:hidden;
+  background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+  font-size:12px
+}
+#login-dp .bottom{
+  background-color:rgba(255,255,255,.8);
+  border-top:1px solid #ddd;
+  clear:both;
+  padding:14px;
+}
+#login-dp .social-buttons{
+  margin:12px 0
+}
+#login-dp .social-buttons a{
+  width: 49%;
+}
+#login-dp .form-group {
+  margin-bottom: 10px;
+}
+.btn-fb{
+  color: #fff;
+  background-color:#3b5998;
+}
+.btn-fb:hover{
+  color: #fff;
+  background-color:#496ebc
+}
+.btn-tw{
+  color: #fff;
+  background-color:#55acee;
+}
+.btn-tw:hover{
+  color: #fff;
+  background-color:#59b5fa;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: transparent !important;
+}
+.navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #10DBD9 !important;
+}
+@media screen and (min-width: 900px) {
+  .container {
+    width: 100% !important;
+  }
+  .logo {
+    margin-left: 100px !important;
+  }
+  #buttonsNav {
+    margin-left : 90px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+ .dropdown-toggle {
+   padding: 0 !important;
+   text-align: center;
+ }
+  #videosDiv{
+    margin-left: 95px !important;
+  }
+}
+#videos{
+  margin: 20px;
+  background-repeat: no-repeat;
+}
+.hideButton {
+  display: none !important;
+}
+#logoutId {
+  cursor: pointer;
+  float:right !important;
+  margin-left: 100px !important;
+}
+#loginId {
+  cursor: pointer;
+  float:right !important;
+  margin-left: 100px !important;
+}
+body {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif !important;
+  background: url('../app/components/themeComponents/images/recentMusic.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#test {
+  margin: 20px;
+}
+.btn-primary {
+  background-color: transparent !important;
+  border-color: white !important;
+}
+.btn-primary:hover {
+  border-color: #10DBD9 !important;
+  color: #10DBD9 !important;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.features-block {
+  background: #10C1B2 !important;
+}
+h2.featurette-heading {
+  color: #3243C1 !important;
+}

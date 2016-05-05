@@ -1,0 +1,32 @@
+<div style="text-align: center">
+    <a id="test" class="btn btn-primary btn-outline" data-toggle="modal" data-target="#myModal">Share</a>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Enter your music link:</h4>
+                </div>
+                <div class="modal-body">
+                    <input style="width: 400px;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Share</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="videos" id="videos" style="text-align: center; padding: 30px;">
+    <div class="container">
+        <div id="videosDiv" ng-repeat="video in userVideos" class="col-md-4 ifrm-stng" style="display: block">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{video.link}}" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div style="text-align: center">
+    <a id="test" class="btn btn-primary btn-outline" data-toggle="modal" data-target="#myModal">Share</a>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Choose track to share:</h4>
+                </div>
+                <div class="modal-body">
+                    <span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>
+                </div>
+                <div class="modal-footer">
+                    <span class="btn btn-default btn-file">
+                        Browse <input type="file">
+                    </span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Share</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div  ng-repeat="song in songs" style="text-align: center; padding: 30px;">
+        <h3 style="font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;display:block">
+            {{song.artist}} + {{song.title}}
+        </h3>
+        <audio controls>
+            <source src={{song.path}} type="audio/mpeg">
+        </audio>
+</div>
+
+
