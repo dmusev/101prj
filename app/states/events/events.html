@@ -1,5 +1,5 @@
-<div style="text-align: center">
-    <a id="test" class="btn btn-primary btn-outline" data-toggle="modal" data-target="#myModal">Create Event</a>
+<div ng-if="authenticated" style="text-align: center">
+    <a style="color: #000;" id="test" class="btn btn-primary btn-outline" data-toggle="modal" data-target="#myModal">Create Event</a>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -10,20 +10,23 @@
                     <h4 class="modal-title">Enter your event information:</h4>
                 </div>
                 <div class="modal-body">
-                    Event Name: <input style="width: 200px;">
+                    Event Name: <input ng-model="newEvent.title" style="width: 200px; float: right; margin-right: 50px;">
                 </div>
                 <div class="modal-body">
-                    Event Date: <input type="date" style="width: 200px;">
+                    Event Date: <input ng-model="newEvent.description" type="date" style="width: 200px; float: right; margin-right: 50px;">
                 </div>
                 <div class="modal-body">
-                    Upload event photo: <span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>
+                    Event description: <input ng-model="newEvent.eventDate" style="width: 200px;  float: right; margin-right: 50px;">
+                </div>
+                <div class="modal-body">
+                    Event Location: <input ng-model="newEvent.location" style="width: 200px;  float: right; margin-right: 50px;">
+                </div>
+                <div class="modal-body">
+                    Event Location: <input ng-model="newEvent.posterUrl" style="width: 200px;  float: right; margin-right: 50px;">
+                </div>
 
-                    <span class="btn btn-default btn-file">
-                        Browse <input type="file">
-                    </span>
-                </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Create</button>
+                    <button ng-click="createEvent(newEvent)" type="button" class="btn btn-default" data-dismiss="modal">Create</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -31,32 +34,22 @@
     </div>
 </div>
 <div class="features-block" id="events">
-    <div class="container">
-        <h3>Events</h3>
+    <h3>Events</h3>
+    <div class="container" ng-repeat="ev in test"   >
         <div class="row featurette">
             <div class="col-md-7 txt-sty1 flot-stn3">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                <h2 class="featurette-heading">Event  :   <span class="text-muted">{{ev.title}}.</span></h2>
+                <p class="lead">Description: {{ev.description}}</p>
+                <p class="lead">Date: {{ev.eventDate}}</p>
+                <p class="lead">Location: {{ev.location}}</p>
             </div>
             <div class="col-md-5 flot-stn3">
-                <img class="featurette-image img-responsive center-block" src="http://bloggingtips.moneyreigninc.netdna-cdn.com/wp-content/uploads/2014/12/Event-Blogging-Strategies.jpg" Generic placeholder image">
+                <img class="featurette-image img-responsive center-block" src="{{ev.posterUrl}}">
             </div>
             <div class="clearfix"></div>
         </div>
 
         <hr class="featurette-divider">
-
-        <div class="row featurette">
-            <div class="col-md-7 col-md-push-5 txt-sty2 flot-stn4">
-                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 col-md-pull-7 flot-stn4">
-                <img class="featurette-image img-responsive center-block" src="http://www.pdaeventmanagement.com/uploads/3/9/6/5/39653220/5135637_orig.jpg" alt="Generic placeholder image">
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
         <!--<hr class="featurette-divider">-->
     </div>
 </div>

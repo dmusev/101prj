@@ -15,10 +15,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul id="buttonsNav" class="nav navbar-nav nav-floats1">
-                <li><a href="#/music" class="scroll">Music</a></li>
-                <li><a href="#/videos" class="scroll">Videos</a></li>
-                <li><a href="#/events" class="scroll">Events</a></li>
-                <li><a href="#/contact" class="scroll">Photos</a></li>
+                <li><a style='padding: 20px !important; text-shadow: 2px 5px 2px black, 0 0 25px rgb(130, 130, 130), 0 0 5px black;' href="#/JBox" class="scroll">JBox</a></li>
+                <!--<li><a href="#/videos" class="scroll">Videos</a></li>-->
+                <li><a style='padding: 20px !important; text-shadow: 2px 5px 2px black, 0 0 25px rgb(130, 130, 130), 0 0 5px black;' href="#/events" class="scroll">Events</a></li>
+                <li><a style='padding: 20px !important; text-shadow: 2px 5px 2px black, 0 0 25px rgb(130, 130, 130), 0 0 5px black;' href="#/photos" class="scroll">Photos</a></li>
+
             </ul>
 
             <!--<ul class="form_acess nav-floats2">-->
@@ -28,49 +29,48 @@
                 <!--</form>-->
             <!--</ul>-->
             <!--<div class="collapse navbar-collapse">-->
-            <ul class="nav navbar-nav">
-                <li class="hideButton" id="logoutId">
-                    <a target="_self" ng-click="logout()"><b>Logout</b></a>
-                </li>
-                <li class="dropdown" id="loginId">
-                    <a class="dropdown-toggle" target="_self" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-                    <ul id="login-dp" class="dropdown-menu">
-                        <li>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    Login via
-                                    <div class="social-buttons">
-                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                                    </div>
-                                    or
-                                    <form class="form" role="form"  accept-charset="UTF-8" id="login-nav">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input ng-model="userEmail" type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input ng-model="pass" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block" ng-click="validateForm()">Sign in</button>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> keep me logged-in
-                                            </label>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="bottom text-center">
-                                    New here ? <a href="#"><b>Join Us</b></a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+            <ul class="nav navbar-nav" style="margin-right: 80px; float: right; !important;">
+                <li ng-click="test()" ng-if="authenticated" href="#/login" id="logoutId"><a  style='padding: 20px !important; text-shadow: 2px 5px 2px black, 0 0 25px rgb(130, 130, 130), 0 0 5px black;' class="scroll">Logout</a></li>
+                <li ng-if="!authenticated" id="loginId"><a style='padding: 20px !important; text-shadow: 2px 5px 2px black, 0 0 25px rgb(130, 130, 130), 0 0 5px black;' href="#/login" class="scroll">Login</a></li>
+                <!--<li class="dropdown" id="loginId">-->
+                    <!--<a class="dropdown-toggle" target="_self" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>-->
+                    <!--<ul id="login-dp" class="dropdown-menu">-->
+                        <!--<li>-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-md-12">-->
+                                    <!--Login via-->
+                                    <!--<div class="social-buttons">-->
+                                        <!--<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>-->
+                                        <!--<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>-->
+                                    <!--</div>-->
+                                    <!--or-->
+                                    <!--<form class="form" role="form"  accept-charset="UTF-8" id="login-nav">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="sr-only" for="exampleInputEmail2">Email address</label>-->
+                                            <!--<input ng-model="userEmail" type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>-->
+                                        <!--</div>-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="sr-only" for="exampleInputPassword2">Password</label>-->
+                                            <!--<input ng-model="pass" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>-->
+                                            <!--<div class="help-block text-right"><a href="">Forget the password ?</a></div>-->
+                                        <!--</div>-->
+                                        <!--<div class="form-group">-->
+                                            <!--<button type="submit" class="btn btn-primary btn-block" ng-click="validateForm()">Sign in</button>-->
+                                        <!--</div>-->
+                                        <!--<div class="checkbox">-->
+                                            <!--<label>-->
+                                                <!--<input type="checkbox"> keep me logged-in-->
+                                            <!--</label>-->
+                                        <!--</div>-->
+                                    <!--</form>-->
+                                <!--</div>-->
+                                <!--<div class="bottom text-center">-->
+                                    <!--New here ? <a href="#"><b>Join Us</b></a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
             </ul>
             <!--</div>-->
         </div><!-- /.navbar-collapse -->

@@ -1,0 +1,44 @@
+<h1 id="recentPhotosHeader" style="font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif">Recent Photos</h1>
+    <br>
+    <div ng-if="authenticated" style="text-align: center">
+        <a style="color: #000;" id="test" class="btn btn-primary btn-outline" data-toggle="modal" data-target="#myModal">Share Your Photo</a>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Upload your photo</h4>
+                    </div>
+                    <!--<div class="modal-body">-->
+                        <!--Event Name: <input ng-model="newEvent.title" style="width: 200px; float: right; margin-right: 50px;">-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                        <!--Event Date: <input ng-model="newEvent.description" type="date" style="width: 200px; float: right; margin-right: 50px;">-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                        <!--Event description: <input ng-model="newEvent.eventDate" style="width: 200px;  float: right; margin-right: 50px;">-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                        <!--Event Location: <input ng-model="newEvent.location" style="width: 200px;  float: right; margin-right: 50px;">-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                        <!--Event Location: <input ng-model="newEvent.posterUrl" style="width: 200px;  float: right; margin-right: 50px;">-->
+                    <!--</div>-->
+                    <div class="modal-body">
+                        Choose photo: <input style="margin-left: 32%;" data-buttonText="Upload" type="file" file-model = "myFile"/>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button ng-click="uploadFile()" type="button" class="btn btn-default" data-dismiss="modal">Share</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<ng-gallery images="test" thumbs-num="5"></ng-gallery>
+

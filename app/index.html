@@ -19,24 +19,44 @@
   <link href='//fonts.googleapis.com/css?family=BenchNine:400,300,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/ngGallery/src/css/ngGallery.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" style="margin-left: -100px;">
 <nav-bar></nav-bar>
   <div ng-view></div>
 
   <!-- Scripts -->
-  <script type="text/javascript" src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="states/home/home.js"></script>
-  <script src="states/music/music.js"></script>
+  <script src="states/JBox/JBox.js"></script>
   <script src="states/videos/videos.js"></script>
+  <script src="states/events/events.js"></script>
+  <script src="states/login/loginCtrl.js"></script>
+  <script src="states/photos/photosCtrl.js"></script>
+  <script src="directives/appDirectives.js"></script>
+  <script src="factories/mainFactories.js"></script>
   <script src="components/themeComponents/js/jquery-2.1.4.min.js"></script>
   <script src="components/themeComponents/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="components/themeComponents/js/owl.carousel.js"></script>
   <script type="text/javascript" src="components/themeComponents/js/move-top.js"></script>
   <script type="text/javascript" src="components/themeComponents/js/easing.js"></script>
+  <!-- Auth0 Required Libraries-->
+  <!-- Auth0's lock widget library -->
+  <script type="text/javascript" src="https://cdn.auth0.com/js/lock-7.12.min.js"></script>
+  <!-- Angular cookie wrapper library for client cookies -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-cookies.js"></script>
+  <!-- Auth0's Angular SDK Library -->
+  <script type="text/javascript" src="https://cdn.auth0.com/w2/auth0-angular-4.js"></script>
+  <!-- Angular wrapper for localStorage and sessionStorage. Defaults to ng-cookies if not available -->
+  <script src="http://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js" type="text/javascript"> </script>
+  <!-- Angular wrapper library for JWT-->
+  <script src="http://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js" type="text/javascript"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script type="text/javascript" src="bower_components/ngGallery/src/js/ngGallery.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function($) {
       $(".scroll").click(function(event){
